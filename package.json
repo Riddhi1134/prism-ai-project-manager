@@ -1,0 +1,21 @@
+{
+  "name": "prism-ai-project-manager",
+  "private": true,
+  "packageManager": "pnpm@11.9.0",
+  "scripts": {
+    "dev": "turbo run dev",
+    "build": "turbo run build",
+    "lint": "turbo run lint",
+    "typecheck": "turbo run typecheck",
+    "test": "turbo run test",
+    "format": "turbo run format"
+  },
+  "devDependencies": {
+    "@types/node": "^24.13.2",
+    "eslint": "^10.6.0",
+    "prettier": "^3.9.4",
+    "tsx": "^4.22.4",
+    "turbo": "^2.10.2",
+    "typescript": "~6.0.3"
+  }
+}
