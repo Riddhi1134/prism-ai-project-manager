@@ -5,6 +5,9 @@ export async function githubRoutes(app: FastifyInstance) {
   app.post(
     "/webhooks/github",
     {
+      config: {
+        rawBody: true,
+      },
       schema: {
         tags: ["GitHub"],
         summary: "Receive GitHub Webhooks",
