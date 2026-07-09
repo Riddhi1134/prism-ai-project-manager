@@ -2,3 +2,4 @@ export * from "./client.js";
 export * from "./webhook.js";
 export * from "./constants.js";
 export * from "./types.js";
+export * from "./events.js";

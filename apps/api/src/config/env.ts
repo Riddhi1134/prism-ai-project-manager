@@ -12,9 +12,11 @@ const envSchema = z.object({
 
   FRONTEND_URL: z.string().default("http://localhost:5173"),
 
-  GITHUB_APP_ID: z.string().optional(),
-  GITHUB_PRIVATE_KEY: z.string().optional(),
-  GITHUB_WEBHOOK_SECRET: z.string().optional(),
+GITHUB_APP_ID: z.string().optional(),
+
+GITHUB_PRIVATE_KEY_PATH: z.string().optional(),
+
+GITHUB_WEBHOOK_SECRET: z.string().optional(),
 });
 
 export const env = envSchema.parse(process.env);
