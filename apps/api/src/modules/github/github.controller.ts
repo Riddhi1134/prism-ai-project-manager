@@ -1,7 +1,9 @@
 import { FastifyReply, FastifyRequest } from "fastify";
 import { env } from "../../config/env.js";
-import { verifyGitHubWebhook } from "./github.service.js";
-import { dispatchGitHubEvent } from "./github.service.js";
+import {
+  verifyGitHubWebhook,
+  dispatchGitHubEvent,
+} from "./webhook.service.js";
 export async function githubWebhookController(
   request: FastifyRequest,
   reply: FastifyReply,

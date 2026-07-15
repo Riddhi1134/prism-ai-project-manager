@@ -3,8 +3,11 @@ export interface GitHubRepository {
   name: string;
   full_name: string;
   default_branch: string;
-}
 
+  owner: {
+    login: string;
+  };
+}
 export interface GitHubUser {
   login: string;
   id: number;
@@ -29,9 +32,15 @@ export interface GitHubPullRequest {
 export interface PullRequestEventPayload {
   action: string;
 
+  installation: GitHubInstallation;
+
   repository: GitHubRepository;
 
   sender: GitHubUser;
 
   pull_request: GitHubPullRequest;
+}
+
+export interface GitHubInstallation {
+  id: number;
 }

@@ -54,3 +54,24 @@ export async function getPullRequests(
 
   return response.data;
 }
+
+export async function getPullRequestFiles(
+  installationId: number,
+  owner: string,
+  repo: string,
+  pullNumber: number,
+) {
+  const octokit =
+    await createGitHubInstallationClient(installationId);
+
+  const { data } = await octokit.request(
+    "GET /repos/{owner}/{repo}/pulls/{pull_number}/files",
+    {
+      owner,
+      repo,
+      pull_number: pullNumber,
+    },
+  );
+
+  return data;
+}
